@@ -8,8 +8,17 @@
 # r/NintendoSwitch:
 # https://www.reddit.com/r/NintendoSwitch/comments/emjvdf/how_to_transfer_sd_card_data_using_macos/
 
+# Switches off the Archive flag in the microSD card.
 sudo chflags -R arch /Volumes/Untitled/
+
+# Switches on the Archive flag in the Nintendo folder.
 sudo chflags -R noarch /Volumes/Untitled/Nintendo/
+
+# Stops Spotlight from indexing the microSD card.
 sudo mdutil -i off /Volumes/Untitled/
+
+# Removes any indexes from the microSD card.
 sudo mdutil -E /Volumes/Untitled/
+
+# Deletes all folders starting from "._" from the microSD card.
 dot_clean -m /Volumes/Untitled/
