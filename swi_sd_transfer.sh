@@ -8,3 +8,8 @@
 # r/NintendoSwitch:
 # https://www.reddit.com/r/NintendoSwitch/comments/emjvdf/how_to_transfer_sd_card_data_using_macos/
 
+sudo chflags -R arch /Volumes/Untitled/
+sudo chflags -R noarch /Volumes/Untitled/Nintendo/
+sudo mdutil -i off /Volumes/Untitled/
+sudo mdutil -E /Volumes/Untitled/
+dot_clean -m /Volumes/Untitled/
