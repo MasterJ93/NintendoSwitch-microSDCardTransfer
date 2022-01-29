@@ -21,6 +21,8 @@ mdutil -i off /Volumes/Untitled/
 mdutil -E /Volumes/Untitled/
 
 # Deletes all folders starting from "._" from the microSD card.
-dot_clean -m /Volumes/Untitled/
+sudo -u "$REAL_USER" dot_clean -m /Volumes/Untitled/
 
+# TODO: Create user input asking if they want the script to safely
+# eject the microSD card from the Mac.
 echo 'Completed the microSD card preparation process. Please remove the microSD card and insert it to your Nintendo Switch.'
