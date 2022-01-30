@@ -26,3 +26,21 @@ sudo -u "$REAL_USER" dot_clean -m /Volumes/Untitled/
 # TODO: Create user input asking if they want the script to safely
 # eject the microSD card from the Mac.
 echo 'Completed the microSD card preparation process. Please remove the microSD card and insert it to your Nintendo Switch.'
+
+CAN_EJECT=false
+
+while [ $CAN_EJECT == false ]
+do
+    read -rp "Eject the microSD card automatically? (y/n) " CAN_EJECT
+    case $CAN_EJECT in
+	"y")
+		echo ":)"
+		;;
+    "n")
+		echo ":)"
+		;;
+    *)
+		echo "Please press y or z in order to continue."
+		;;
+    esac
+done
