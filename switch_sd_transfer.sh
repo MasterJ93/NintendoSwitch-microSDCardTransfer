@@ -34,7 +34,8 @@ do
     read -rp "Eject the microSD card automatically? (y/n) " CAN_EJECT
     case $CAN_EJECT in
 	"y")
-		echo ":)"
+		echo "Attempting to eject your microSD card..."
+		CAN_EJECT=true
 		;;
     "n")
 		echo "Ok, your microSD will remain mounted to your Mac."
@@ -42,7 +43,7 @@ do
 		CAN_EJECT=true
 		;;
     *)
-		echo "Please press y or z in order to continue."
+		echo "Please press y or n in order to continue."
 		;;
     esac
 done
