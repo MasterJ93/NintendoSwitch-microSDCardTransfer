@@ -35,7 +35,9 @@ do
     case $CAN_EJECT in
 	"y")
 		echo "Attempting to eject your microSD card..."
-		diskutil unmount /Volumes/Untitled/
+		# Ejects the microSD card.
+		diskutil eject /Volumes/Untitled/
+
 		echo "Your microSD card has been ejected. When you're ready, remove the microSD card, then insert it to your Nintendo Switch."
 		CAN_EJECT=true
 		;;
@@ -45,7 +47,7 @@ do
 		CAN_EJECT=true
 		;;
     *)
-		echo "Please press y or n in order to continue."
+		echo "Please press (y/n) in order to continue."
 		;;
     esac
 done
