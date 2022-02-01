@@ -10,3 +10,4 @@ For now, this has only been tested on macOS 12 Catalina, but I don't expect any 
   - [ ] Copying the data from the old microSD card to a new image file
   - [ ] Ejecting the old microSD card and prompting to insert the new microSD card
 - [ ] Add loading bars
+- [ ] Support for custom microSD card names
